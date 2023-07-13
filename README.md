@@ -1,5 +1,8 @@
 # WoH-SpriteChecker
 
+![intr](https://github.com/Myonmu/WoH-SpriteChecker/assets/62897460/0cb1ca26-13a1-4fd7-9108-0649121c7e1e)
+
+
 This is a simple python program that checks every pixel of your sprite and determine if their color is correct.
 
 As you may (should) know, the game has a strict palette and your pixels must be one of the defined colors, otherwise transparency/color mapping will not work correctly.
