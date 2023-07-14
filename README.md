@@ -9,6 +9,8 @@ As you may (should) know, the game has a strict palette and your pixels must be 
 
 This program detects any pixel that do not match any of the defined colors and convert them to the closest one. 
 
+**IMPORTANT**: This program is good at checking tiny mistakes that you may have overlooked, but bad at checking anything that is deliberately done erronous.
+
 ## Palette Definition
 
 Currently, the color palette of most sprites (sprites excluding character and enemy) is defined as:
@@ -59,4 +61,9 @@ If it is indeed a character sprite, then the bottom left corner of the image is 
 ### Iterate through the pixels
 
 It is better to visualise it in a color picker:
+
+![w](https://github.com/Myonmu/WoH-SpriteChecker/assets/62897460/5c3db990-ad87-4daa-9c49-43256c6d9cec)
+
+Note that transparency is also checked after determine the corrected color, if below 50% it will be converted to 0, and if not, to 100%.
+
 
