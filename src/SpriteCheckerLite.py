@@ -35,7 +35,10 @@ char_sizes = np.array(
 )
 
 
-def should_ignore_transparency_color(sizes):
+def should_ignore_transparency_color(sizes, fname):
+    fname_lower = fname.lower()
+    if "event" in fname_lower or "evt" in fname_lower:
+        return True
     img_size = np.array([sizes[1], sizes[0]])
     for s in char_sizes:
         if (s == img_size).all():
@@ -94,7 +97,7 @@ for f in files:
     shape = img.shape
     print("image dimension : " + str(shape))
     # if it is an icon, don't pick transparency color
-    transparency_ignore = should_ignore_transparency_color(shape)
+    transparency_ignore = should_ignore_transparency_color(shape, f)
 
     if transparency_ignore:
         transparent = None
